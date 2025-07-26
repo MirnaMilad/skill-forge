@@ -1,73 +1,101 @@
-<<<<<<< HEAD
-# skill-forge
-=======
-# React + TypeScript + Vite
+# SkillForge: Full-Stack Project Plan (NestJS + ReactJS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![SkillForge UI](./src/assets/images/project-ui/ui-preview.png)
 
-Currently, two official plugins are available:
+## 🌟 Project Overview
+**SkillForge** is a developer-focused freelance marketplace platform. Developers can create profiles, bid on projects, and showcase skills. Clients post projects and select candidates. Admins oversee platform health.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📊 Core Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** ReactJS, React Router, Axios, css
+- **Backend:** NestJS, TypeORM, PostgreSQL, Multer
+- **Optional Enhancements:** WebSockets (chat), Stripe API (mock), CI/CD, Docker
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🔒 User Roles
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Developer**: Profile, skills, proposal submission
+- **Client**: Project creation, bid management
+- **Admin**: Dashboard, user/project control
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔹 Weekly Plan
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
->>>>>>> master
+### Week 1: ReactJS Fundamentals
+- Setup React with Vite/CRA
+- Create base layout: Header, Footer, Home
+- Dummy pages: Login, Register, Project Listings
+
+### Week 2: ReactJS Advanced Concepts
+- useContext, useEffect, React Router
+- Forms with validation
+- Auth context and protected routes
+
+### Week 3: NestJS Fundamentals
+- Setup NestJS project with modules/services
+- Create Auth and User modules
+- JWT-based login/register APIs
+
+### Week 4: NestJS Advanced + DB Integration
+- Setup PostgreSQL + TypeORM
+- Entities: User, Developer, Client, Project, Proposal
+- Role Guards, File Upload (Multer)
+
+### Week 5: API Integration
+- Connect React to Nest APIs (Axios)
+- Auth flow: store token, protected routes
+- Developer: Create/edit profile, view projects
+- Client: Post/edit project, view bids
+
+### Week 6: Polishing + Bonus Features
+- Search, filter, pagination
+- File upload (CV/Profile Image)
+- Admin dashboard (basic charts/stats)
+- Optional: Real-time chat (WebSockets)
+
+### Week 7: Deployment
+- Dockerize backend and frontend
+- Use Vercel (frontend) & Render/Railway (backend)
+- Environment config
+
+---
+
+## 🔗 Database Schema (Simplified)
+
+- **User** (id, name, email, password, role)
+- **DeveloperProfile** (bio, skills, github, userId)
+- **ClientProfile** (companyName, description, userId)
+- **Project** (title, description, budget, clientId)
+- **Proposal** (projectId, developerId, message, status)
+
+---
+
+## 🔧 UI Components
+
+- **Navbar** (conditional items: login/logout/dashboard)
+- **CardProject** (title, budget, skills)
+- **FormProposal** (textarea + submit)
+- **ProfilePage** (developer & client variants)
+- **AdminDashboard** (stats, tables, action buttons)
+
+---
+
+## 🌟 Bonus Enhancements
+
+- Chat between clients and developers (WebSocket)
+- Email notifications
+- OAuth with Google/GitHub
+- Ratings & reviews
+- Payment mock (Stripe test mode)
+
+---
+
+## 🚀 Final Output
+- Fully functioning web app
+- Mobile-responsive UI
+- Live deployment (frontend + backend)
+- GitHub repository with README, environment docs
