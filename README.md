@@ -1,6 +1,6 @@
 # SkillForge: Full-Stack Project Plan (NestJS + ReactJS)
 
-![SkillForge UI](./assets/images/project-ui/ui-preview.png)
+![SkillForge UI](./src/assets/images/project-ui/ui-preview.png)
 
 ## 🌟 Project Overview
 **SkillForge** is a developer-focused freelance marketplace platform. Developers can create profiles, bid on projects, and showcase skills. Clients post projects and select candidates. Admins oversee platform health.
