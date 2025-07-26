@@ -11,7 +11,8 @@
     "prepare": "husky install",
     "lint:fix": "eslint . --fix",
     "format": "prettier \"**/*.{ts,tsx,js,jsx,json,md,css,scss}\" --write",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "commitlint": "commitlint --edit $1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
