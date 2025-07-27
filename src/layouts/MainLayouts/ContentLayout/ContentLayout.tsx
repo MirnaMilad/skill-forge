@@ -12,7 +12,9 @@ const ContentLayout: FC = () => {
           <Sidebar />
         </div>
         <div className="col-9 bg-light">
-          <Outlet />
+          <div className="container py-3 h-100">
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>
