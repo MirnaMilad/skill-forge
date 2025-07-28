@@ -1,12 +1,12 @@
 import React, { type FC } from "react";
-import { fields } from "./Profie.config";
-import Button from "../../shared/Button";
-import FormField from "../../shared/FormField/FormField";
+import { ProjectFields } from "./Project.config";
+import FormField from "../../../../shared/FormField/FormField";
+import Button from "../../../../shared/Button";
 
-const Profile: FC = () => {
+const ProjectForm: FC = () => {
   return (
     <form>
-      {fields.map((field) => (
+      {ProjectFields.map((field) => (
         <FormField
           key={field.id}
           id={field.id}
@@ -20,4 +20,4 @@ const Profile: FC = () => {
   );
 };
 
-export default Profile;
+export default ProjectForm;
