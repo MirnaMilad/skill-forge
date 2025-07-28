@@ -1,4 +1,4 @@
-import { type NavLinkItem } from "./links.model";
+import { type NavLinkItem } from "./Sidebar.model";
 
 export const ROUTES = {
   dashboard: "/dashboard",
