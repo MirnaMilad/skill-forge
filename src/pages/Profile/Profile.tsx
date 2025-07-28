@@ -1,28 +1,25 @@
 import React, { type FC } from "react";
 import { fields } from "./Profie.config";
-import styles from "./Profile.module.css";
-import Button from "../../shared/button/Button";
+import Button from "../../shared/Button";
+import FormField from "../../shared/FormField/FormField";
 
 const Profile: FC = () => {
   return (
     <div>
-      <h1>My Profile</h1>
-      <form>
-        {fields.map((field) => (
-          <div className="mb-3">
-            <label htmlFor={field.id} className="form-label">
-              {field.label}
-            </label>
-            <input
-              type={field.type}
-              className="form-control"
+      <div>
+        <form>
+          {fields.map((field) => (
+            <FormField
+              key={field.id}
               id={field.id}
+              label={field.label}
+              type={field.type}
               placeholder={field.placeholder}
             />
-          </div>
-        ))}
-        <Button></Button>
-      </form>
+          ))}
+          <Button></Button>
+        </form>
+      </div>
     </div>
   );
 };
