@@ -1,4 +1,4 @@
-import { type InputFieldProps } from "./profile.model";
+import { type InputFieldProps } from "../../shared/models/InputFieldProps.model";
 
 export const fields: InputFieldProps[] = [
   {

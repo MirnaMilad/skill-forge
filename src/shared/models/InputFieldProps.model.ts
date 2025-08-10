@@ -1,6 +1,6 @@
 export interface InputFieldProps {
   id: string;
   label: string;
-  placeholder: string;
+  placeholder?: string;
   type: string;
 }
