@@ -4,7 +4,7 @@ import { type ButtonProps } from "./Button.model";
 const Button: FC<ButtonProps> = ({
   children = "Submit",
   onClick,
-  className = "btn  bg-primary text-white",
+  className = "btn bg-primary text-white fw-bold",
   type = "button",
 }) => {
   return (
