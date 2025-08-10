@@ -1,7 +1,6 @@
 import React, { type FC } from "react";
 import SearchInput from "../../shared/SearchInput";
-import ProjectList from "./components/ProjectLIst";
-import Button from "../../shared/Button";
+import ProjectList from "./components/ProjectList";
 
 const Projects: FC = () => {
   return (
